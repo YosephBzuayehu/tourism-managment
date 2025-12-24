@@ -1,4 +1,4 @@
-git checkout -b TOUR-11-implement-backend-authentication origin/TOUR-11-implement-backend-authentication
+
 <?php
 // logout.php: Destroys the session and logs out the user
 session_start();
