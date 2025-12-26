@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import Unauthorized from './pages/Unauthorized';
 // Placeholder for Login component
@@ -10,6 +11,7 @@ function App() {
     return (
         <Router>
             <AuthProvider>
+                <Navbar />
                 <Routes>
                     <Route path="/login" element={<Login />} />
                     <Route path="/unauthorized" element={<Unauthorized />} />
