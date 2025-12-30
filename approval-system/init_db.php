@@ -32,6 +32,18 @@ if (!$conn->query($create)) {
     die('Failed to create contents table: ' . $conn->error);
 }
 
+$createNotif = "CREATE TABLE IF NOT EXISTS `notifications` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `user_id` INT NOT NULL,
+  `message` TEXT NOT NULL,
+  `is_read` BOOLEAN NOT NULL DEFAULT 0,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
+
+if (!$conn->query($createNotif)) {
+    die('Failed to create notifications table: ' . $conn->error);
+}
+
 echo "Initialization complete. Table `contents` exists in database `" . htmlspecialchars($DB_NAME) . "`.";
 
 ?>
