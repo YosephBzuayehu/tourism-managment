@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Loading Optimization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Content Loading Optimization</h1>
+
+    <h2>Pagination</h2>
+    <div id="pagination">
+        <?php include 'pagination.php'; ?>
+    </div>
+
+    <h2>Lazy Loading</h2>
+    <div id="lazy-loading">
+        <div class="lazy-item" data-id="1"></div>
+        <div class="lazy-item" data-id="2"></div>
+        <div class="lazy-item" data-id="3"></div>
+        <!-- Add more placeholders as needed -->
+    </div>
+
+    <script src="lazy_loading.js"></script>
+</body>
+</html>
